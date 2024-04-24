@@ -1,5 +1,6 @@
 import requests
 import json
+from transfrom_data import retrieve_title_for_user_1
 
 url = "https://jsonplaceholder.typicode.com/todos"
 
@@ -10,5 +11,6 @@ if res.status_code == 200:
 
     with open("todo_data.json", "w") as file:
         json.dump(data, file, indent=4)
+    retrieve_title_for_user_1()
 else:
     print("Error retrieving data")
